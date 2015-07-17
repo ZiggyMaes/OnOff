@@ -62,7 +62,7 @@ function ping($ip, $port)
 	{
 		return "off";
 	}
-	fclose($fp);
+	fclose($socket);
 }
 
 $servers = array
