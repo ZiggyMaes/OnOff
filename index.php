@@ -1,7 +1,5 @@
 <?php
 
-$targetIP = 
-
 function WakeOnLan($addr, $mac, $socket_number) 
 {
    $addr_byte = explode(':', $mac);
