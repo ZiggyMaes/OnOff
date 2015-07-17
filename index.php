@@ -1,5 +1,7 @@
 <?php
 
+$targetIP = 
+
 function WakeOnLan($addr, $mac, $socket_number) 
 {
    $addr_byte = explode(':', $mac);
@@ -52,7 +54,7 @@ function WakeOnLan($addr, $mac, $socket_number)
 function ping($ip, $port)
 {
 	$timeout = 1;
-	$socket = @fsockopen($ip, $port, $errno, $errstr, $timeout );
+		$socket = @fsockopen($ip, $port, $errno, $errstr, $timeout );
 	$online = ( $socket !== false );
 	if($online)
 	{
@@ -62,6 +64,7 @@ function ping($ip, $port)
 	{
 		return "off";
 	}
+	fclose($fp);
 }
 
 $servers = array
